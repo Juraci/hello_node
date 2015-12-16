@@ -8,6 +8,7 @@
     "request": "^2.67.0"
   },
   "scripts": {
-    "test": "jasmine-node spec/ --verbose --captureExceptions"
+    "test": "jasmine-node spec/ --verbose --captureExceptions",
+    "start": "node hello.js"
   }
 }
