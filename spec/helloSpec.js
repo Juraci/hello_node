@@ -5,7 +5,14 @@ describe("Hello", function(){
     describe("GET /", function() {
         it("returns status code 200", function(done) {
             request(base_url, function(error, response, body) {
-                expect(response.statusCode).toEqual(200);
+                expect(response.statusCode).toBe(200);
+                done();
+            });
+        });
+
+        it("returns 'Hello, this is Dog.' as body", function(done) {
+            request(base_url, function(error, response, body) {
+                expect(body).toBe('Hello, this is Dog.');
                 done();
             });
         });
